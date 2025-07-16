@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 900;
+    color: #ccc;
+    -webkit-text-stroke: 1px violet;
+    position: relative;
+}
+
+h1::before{
+    content: "HOVER";
+
+    position: absolute;
+    color: violet;
+    border-right: 2px solid violet;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    text-shadow: 2px 2px 5px violet;
+    transition: all 0.5s ease;
+}
+
+h1:hover::before{
+    width: 100%;
+}
